@@ -12,6 +12,7 @@
     <!-- CSS only -->
     <script src="https://kit.fontawesome.com/4ae728401a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <style>
     /* .btn {
@@ -125,7 +126,7 @@
         let location_name = loc_name.value;
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location_name}&appid=6b81640162d4230d87adb802fde1fba7&units=metric`).
             then(res => res.json()).then(data => displayValues(data))
-            .catch((err)=>alert("Data not found","sorry for the inconvenience","error"))
+            .catch((err)=>swal("Data not found","sorry for the inconvenience","error"))
     }
     function displayValues(data) {
         let location_name = data.name;
