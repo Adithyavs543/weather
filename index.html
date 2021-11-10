@@ -101,11 +101,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-md-4 col-12"></div>
+        <div class="col-md-4 col-12 ">
             <div class="result"></div>
         </div>
-        <div class="col-4"></div>
+        <div class="col-md-4 col-12"></div>
     </div>
 </body>
 <script>
@@ -120,7 +120,7 @@
         let weather_type = data["weather"][0].main;
         let wind_speed = data["wind"].speed;
         // console.log(location_name,temperature,weather_type,wind_speed);
-        let html_data = `<div class="card" style="margin-left:400px; margin bottom:5px;" >
+        let html_data = `<div class="card" style=" margin bottom:5px;" >
 
     <li class="list-group-item p-3 mb-2 bg-warning text-dark">Location:${location_name}</li>
     <li class="list-group-item p-3 mb-2 bg-info text-dark">Temperature:${temperature}</li>
