@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
 </head>
 <style>
-    .btn {
+    /* .btn {
         background-color: #52ACFF;
         background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
 
         border-radius: 25px;
         margin-left: 55px;
         /* padding-left: 30px; */
-        font-style: italic;
+        /* font-style: italic;
         width: 50px;
         font-size: larger;
         text-align: center;
@@ -40,7 +40,7 @@
 
         font-style: italic;
         text-align: center;
-    }
+    } */ 
 
     body {
         background-image: url("images/bg4.jpg");
@@ -92,12 +92,24 @@
     </h1>
     <div class="container">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <input type="text" id="loc_name">
-                <button class="btn btn-info" onclick="fetchWeather()"><i class="fas fa-search-location fs-3"></i></button>
+            <div class="col-md-4 col-12"></div>
+            <div class="col-md-4 col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-8">
+                            <input type="text" id="loc_name" class="fs-5 fw-bold form-control"
+                            style=" font-family: 'Poiret One', cursive; color: dodgerblue; border: cyan; border-radius: 20px;">
+        
+                        </div>
+                        <div class="col-md-4 col-4" style="margin-left: -25px;">
+                            <button class="btn col-md-8 col-8" onclick="fetchWeather()"
+                            style="font-family: 'Poiret One', cursive; color: white;  border-radius: 20px; background-image: linear-gradient(to right, #2499dc 0%, #4A569D  51%, #eee4e4  100%)"><i class="fas fa-search-location"></i></button>
+        
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4"></div>
+            <div class="col-md-4 col-12"></div>
         </div>
     </div>
     <div class="container">
@@ -113,6 +125,7 @@
         let location_name = loc_name.value;
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location_name}&appid=6b81640162d4230d87adb802fde1fba7&units=metric`).
             then(res => res.json()).then(data => displayValues(data))
+            .catch((err)=>alert("Data not found","sorry for the inconvenience","error"))
     }
     function displayValues(data) {
         let location_name = data.name;
