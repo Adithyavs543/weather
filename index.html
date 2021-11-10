@@ -19,12 +19,12 @@
         background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
 
         border-radius: 25px;
-        margin-top: 135px;
-        margin-left: 25px;
-        padding-left: 30px;
+        margin-left: 55px;
+        /* padding-left: 30px; */
         font-style: italic;
-        width: 180px;
+        width: 50px;
         font-size: larger;
+        text-align: center;
     }
 
     input {
@@ -57,7 +57,7 @@
         border: transparent;
         font-style: italic;
         border-color: rgb(238, 232, 232);
-        width: 21rem;
+        width: 20rem;
         /* background-color: rgb(244, 255, 255); */
         background: rgba(3, 172, 240, 0.5);
         /* opacity: .5; */
@@ -88,14 +88,14 @@
 </style>
 
 <body>
-    <h1 class="fs-1"<i>Weather Forecast   <i class="fas fa-cloud-sun"></i>
+    <h1 class="fs-1">Weather Forecast   <i class="fas  fa-cloud-sun"></i>
     </h1>
     <div class="container">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4">
                 <input type="text" id="loc_name">
-                <button class="btn btn-info" onclick="fetchWeather()">Weather</button>
+                <button class="btn btn-info" onclick="fetchWeather()"><i class="fas fa-search-location fs-3"></i></button>
             </div>
             <div class="col-4"></div>
         </div>
